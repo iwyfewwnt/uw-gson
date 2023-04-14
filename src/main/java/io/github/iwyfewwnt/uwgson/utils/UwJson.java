@@ -1,5 +1,5 @@
 
-package io.github.iwyfewwnt.uwgson;
+package io.github.iwyfewwnt.uwgson.utils;
 
 import com.google.gson.JsonElement;
 

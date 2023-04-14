@@ -19,7 +19,7 @@ package io.github.iwyfewwnt.uwgson.deserializers;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import io.github.iwyfewwnt.uwgson.UwJson;
+import io.github.iwyfewwnt.uwgson.utils.UwJson;
 
 import java.lang.reflect.Type;
 
