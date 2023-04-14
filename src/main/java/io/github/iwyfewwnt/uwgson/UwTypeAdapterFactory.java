@@ -15,18 +15,18 @@ import java.util.Set;
  * <p><hr>
  * <pre>{@code
  *     new GsonBuilder()
- *             .registerTypeAdapterFactory(new UwGsonTypeAdapterFactory())
+ *             .registerTypeAdapterFactory(new UwTypeAdapterFactory())
  *             .create();
  * }</pre>
  * <hr>
  */
 @SuppressWarnings({"unused", "unchecked"})
-public final class UwGsonTypeAdapterFactory implements TypeAdapterFactory {
+public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 
 	/**
-	 * Initialize a {@link UwGsonTypeAdapterFactory} instance.
+	 * Initialize a {@link UwTypeAdapterFactory} instance.
 	 */
-	public UwGsonTypeAdapterFactory() {
+	public UwTypeAdapterFactory() {
 	}
 
 	/**
