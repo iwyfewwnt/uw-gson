@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class ShortJsonDeserializer implements JsonDeserializer<Short> {
 
 	/**
+	 * Initialize a {@link ShortJsonDeserializer} instance.
+	 */
+	public ShortJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

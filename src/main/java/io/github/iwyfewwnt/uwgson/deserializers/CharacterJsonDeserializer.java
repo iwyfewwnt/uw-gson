@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class CharacterJsonDeserializer implements JsonDeserializer<Character> {
 
 	/**
+	 * Initialize a {@link CharacterJsonDeserializer} instance.
+	 */
+	public CharacterJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

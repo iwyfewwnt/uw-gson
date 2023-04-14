@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class FloatJsonDeserializer implements JsonDeserializer<Float> {
 
 	/**
+	 * Initialize a {@link FloatJsonDeserializer} instance.
+	 */
+	public FloatJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

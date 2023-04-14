@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class DoubleJsonDeserializer implements JsonDeserializer<Double> {
 
 	/**
+	 * Initialize a {@link DoubleJsonDeserializer} instance.
+	 */
+	public DoubleJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

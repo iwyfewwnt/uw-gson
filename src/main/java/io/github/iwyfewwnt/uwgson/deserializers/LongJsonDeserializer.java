@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class LongJsonDeserializer implements JsonDeserializer<Long> {
 
 	/**
+	 * Initialize a {@link LongJsonDeserializer} instance.
+	 */
+	public LongJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

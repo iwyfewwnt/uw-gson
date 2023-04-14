@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class IntegerJsonDeserializer implements JsonDeserializer<Integer> {
 
 	/**
+	 * Initialize an {@link IntegerJsonDeserializer} instance.
+	 */
+	public IntegerJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

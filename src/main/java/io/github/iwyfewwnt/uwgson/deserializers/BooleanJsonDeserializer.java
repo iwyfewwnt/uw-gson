@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class BooleanJsonDeserializer implements JsonDeserializer<Boolean> {
 
 	/**
+	 * Initialize a {@link BooleanJsonDeserializer} instance.
+	 */
+	public BooleanJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

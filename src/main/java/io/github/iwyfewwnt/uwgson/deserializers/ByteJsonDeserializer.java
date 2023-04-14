@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class ByteJsonDeserializer implements JsonDeserializer<Byte> {
 
 	/**
+	 * Initialize a {@link ByteJsonDeserializer} instance.
+	 */
+	public ByteJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

@@ -30,6 +30,12 @@ import java.lang.reflect.Type;
 public final class StringJsonDeserializer implements JsonDeserializer<String> {
 
 	/**
+	 * Initialize a {@link StringJsonDeserializer} instance.
+	 */
+	public StringJsonDeserializer() {
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override
