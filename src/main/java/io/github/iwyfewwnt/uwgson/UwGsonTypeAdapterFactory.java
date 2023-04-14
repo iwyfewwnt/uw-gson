@@ -20,7 +20,7 @@ import java.util.Set;
  * }</pre>
  * <hr>
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "unchecked"})
 public final class UwGsonTypeAdapterFactory implements TypeAdapterFactory {
 
 	/**
@@ -42,13 +42,11 @@ public final class UwGsonTypeAdapterFactory implements TypeAdapterFactory {
 
 		JsonSerializer<T> serializer = null;
 		if (typeAdapter instanceof JsonSerializer) {
-			//noinspection unchecked
 			serializer = (JsonSerializer<T>) typeAdapter;
 		}
 
 		JsonDeserializer<T> deserializer = null;
 		if (typeAdapter instanceof JsonDeserializer) {
-			//noinspection unchecked
 			deserializer = (JsonDeserializer<T>) typeAdapter;
 		}
 
