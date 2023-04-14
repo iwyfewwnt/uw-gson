@@ -27,12 +27,12 @@ import java.lang.reflect.Type;
  * A {@link String} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class StringJsonDeserializer implements JsonDeserializer<String> {
+public final class UwStringJsonDeserializer implements JsonDeserializer<String> {
 
 	/**
-	 * Initialize a {@link StringJsonDeserializer} instance.
+	 * Initialize a {@link UwStringJsonDeserializer} instance.
 	 */
-	public StringJsonDeserializer() {
+	public UwStringJsonDeserializer() {
 	}
 
 	/**

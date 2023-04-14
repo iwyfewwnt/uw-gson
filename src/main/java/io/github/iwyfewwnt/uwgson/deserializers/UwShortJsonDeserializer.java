@@ -27,12 +27,12 @@ import java.lang.reflect.Type;
  * A {@link Short} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class ShortJsonDeserializer implements JsonDeserializer<Short> {
+public final class UwShortJsonDeserializer implements JsonDeserializer<Short> {
 
 	/**
-	 * Initialize a {@link ShortJsonDeserializer} instance.
+	 * Initialize a {@link UwShortJsonDeserializer} instance.
 	 */
-	public ShortJsonDeserializer() {
+	public UwShortJsonDeserializer() {
 	}
 
 	/**

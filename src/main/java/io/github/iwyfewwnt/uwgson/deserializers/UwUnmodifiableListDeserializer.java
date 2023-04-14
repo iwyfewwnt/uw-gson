@@ -16,12 +16,12 @@ import java.util.List;
  * An unmodifiable {@link List} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class UnmodifiableListDeserializer implements JsonDeserializer<List<?>> {
+public final class UwUnmodifiableListDeserializer implements JsonDeserializer<List<?>> {
 
 	/**
-	 * Initialize an {@link UnmodifiableListDeserializer} instance.
+	 * Initialize an {@link UwUnmodifiableListDeserializer} instance.
 	 */
-	public UnmodifiableListDeserializer() {
+	public UwUnmodifiableListDeserializer() {
 	}
 
 	/**

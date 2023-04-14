@@ -17,12 +17,12 @@ import java.util.Set;
  * An unmodifiable {@link Set} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class UnmodifiableSetDeserializer implements JsonDeserializer<Set<?>> {
+public final class UwUnmodifiableSetDeserializer implements JsonDeserializer<Set<?>> {
 
 	/**
-	 * Initialize an {@link UnmodifiableSetDeserializer} instance.
+	 * Initialize an {@link UwUnmodifiableSetDeserializer} instance.
 	 */
-	public UnmodifiableSetDeserializer() {
+	public UwUnmodifiableSetDeserializer() {
 	}
 
 	/**

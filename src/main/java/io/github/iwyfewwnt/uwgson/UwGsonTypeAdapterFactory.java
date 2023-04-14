@@ -62,47 +62,47 @@ public final class UwGsonTypeAdapterFactory implements TypeAdapterFactory {
 	 */
 	private static Object getTypeAdapter(Class<?> clazz) {
 		if (clazz == String.class) {
-			return new StringJsonDeserializer();
+			return new UwStringJsonDeserializer();
 		}
 
 		if (clazz == Boolean.class) {
-			return new BooleanJsonDeserializer();
+			return new UwBooleanJsonDeserializer();
 		}
 
 		if (clazz == Byte.class) {
-			return new ByteJsonDeserializer();
+			return new UwByteJsonDeserializer();
 		}
 
 		if (clazz == Short.class) {
-			return new ShortJsonDeserializer();
+			return new UwShortJsonDeserializer();
 		}
 
 		if (clazz == Integer.class) {
-			return new IntegerJsonDeserializer();
+			return new UwIntegerJsonDeserializer();
 		}
 
 		if (clazz == Long.class) {
-			return new LongJsonDeserializer();
+			return new UwLongJsonDeserializer();
 		}
 
 		if (clazz == Float.class) {
-			return new FloatJsonDeserializer();
+			return new UwFloatJsonDeserializer();
 		}
 
 		if (clazz == Double.class) {
-			return new DoubleJsonDeserializer();
+			return new UwDoubleJsonDeserializer();
 		}
 
 		if (clazz == List.class) {
-			return new UnmodifiableListDeserializer();
+			return new UwUnmodifiableListDeserializer();
 		}
 
 		if (clazz == Map.class) {
-			return new UnmodifiableMapDeserializer();
+			return new UwUnmodifiableMapDeserializer();
 		}
 
 		if (clazz == Set.class) {
-			return new UnmodifiableSetDeserializer();
+			return new UwUnmodifiableSetDeserializer();
 		}
 
 		return null;

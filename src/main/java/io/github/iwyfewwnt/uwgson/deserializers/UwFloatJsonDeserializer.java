@@ -24,25 +24,25 @@ import io.github.iwyfewwnt.uwgson.utils.UwJson;
 import java.lang.reflect.Type;
 
 /**
- * A {@link Long} JSON deserializer.
+ * A {@link Float} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class LongJsonDeserializer implements JsonDeserializer<Long> {
+public final class UwFloatJsonDeserializer implements JsonDeserializer<Float> {
 
 	/**
-	 * Initialize a {@link LongJsonDeserializer} instance.
+	 * Initialize a {@link UwFloatJsonDeserializer} instance.
 	 */
-	public LongJsonDeserializer() {
+	public UwFloatJsonDeserializer() {
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Long deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
+	public Float deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 
-		return UwJson.deserialize(json, Long.class);
+		return UwJson.deserialize(json, Float.class);
 	}
 }

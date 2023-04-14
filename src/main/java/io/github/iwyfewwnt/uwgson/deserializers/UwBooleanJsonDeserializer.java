@@ -27,12 +27,12 @@ import java.lang.reflect.Type;
  * A {@link Boolean} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class BooleanJsonDeserializer implements JsonDeserializer<Boolean> {
+public final class UwBooleanJsonDeserializer implements JsonDeserializer<Boolean> {
 
 	/**
-	 * Initialize a {@link BooleanJsonDeserializer} instance.
+	 * Initialize a {@link UwBooleanJsonDeserializer} instance.
 	 */
-	public BooleanJsonDeserializer() {
+	public UwBooleanJsonDeserializer() {
 	}
 
 	/**

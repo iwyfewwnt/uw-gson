@@ -17,12 +17,12 @@ import java.util.Set;
  * An unmodifiable {@link Map} JSON deserializer.
  */
 @SuppressWarnings("unused")
-public final class UnmodifiableMapDeserializer implements JsonDeserializer<Map<?, ?>> {
+public final class UwUnmodifiableMapDeserializer implements JsonDeserializer<Map<?, ?>> {
 
 	/**
-	 * Initialize an {@link UnmodifiableMapDeserializer} instance.
+	 * Initialize an {@link UwUnmodifiableMapDeserializer} instance.
 	 */
-	public UnmodifiableMapDeserializer() {
+	public UwUnmodifiableMapDeserializer() {
 	}
 
 	/**
