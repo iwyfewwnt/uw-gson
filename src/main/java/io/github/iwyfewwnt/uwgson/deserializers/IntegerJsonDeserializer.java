@@ -24,7 +24,7 @@ import io.github.iwyfewwnt.uwgson.utils.UwJson;
 import java.lang.reflect.Type;
 
 /**
- * A {@link Integer} JSON deserializer.
+ * An {@link Integer} JSON deserializer.
  */
 @SuppressWarnings("unused")
 public final class IntegerJsonDeserializer implements JsonDeserializer<Integer> {
