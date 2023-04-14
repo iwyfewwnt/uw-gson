@@ -33,7 +33,7 @@ public final class ShortJsonDeserializer implements JsonDeserializer<Short> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Short deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Short deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

@@ -33,7 +33,7 @@ public final class StringJsonDeserializer implements JsonDeserializer<String> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public String deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 //		UwJson.setIsAllowNullStringOption(true);  // Default
 		UwJson.setIsAllowEmptyStringOption(false);
 

@@ -33,7 +33,7 @@ public final class ByteJsonDeserializer implements JsonDeserializer<Byte> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Byte deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Byte deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

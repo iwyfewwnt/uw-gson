@@ -33,7 +33,7 @@ public final class CharacterJsonDeserializer implements JsonDeserializer<Charact
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Character deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Character deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

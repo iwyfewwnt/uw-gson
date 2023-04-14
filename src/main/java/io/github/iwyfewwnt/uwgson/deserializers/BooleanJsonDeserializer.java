@@ -33,7 +33,7 @@ public final class BooleanJsonDeserializer implements JsonDeserializer<Boolean> 
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Boolean deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Boolean deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 		UwJson.setIsAllowIntAsBoolOption(true);

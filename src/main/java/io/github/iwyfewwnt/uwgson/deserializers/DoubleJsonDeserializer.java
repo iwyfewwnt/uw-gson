@@ -33,7 +33,7 @@ public final class DoubleJsonDeserializer implements JsonDeserializer<Double> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Double deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Double deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

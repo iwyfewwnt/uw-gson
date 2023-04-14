@@ -33,7 +33,7 @@ public final class IntegerJsonDeserializer implements JsonDeserializer<Integer> 
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Integer deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Integer deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

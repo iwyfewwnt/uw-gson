@@ -33,7 +33,7 @@ public final class FloatJsonDeserializer implements JsonDeserializer<Float> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Float deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Float deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 

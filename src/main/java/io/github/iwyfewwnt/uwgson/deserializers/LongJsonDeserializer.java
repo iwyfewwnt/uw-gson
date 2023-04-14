@@ -33,7 +33,7 @@ public final class LongJsonDeserializer implements JsonDeserializer<Long> {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Long deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) {
+	public Long deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
 		UwJson.setIsAllowNullStringOption(false);
 //		UwJson.setIsAllowEmptyStringOption(true);  // Default
 
