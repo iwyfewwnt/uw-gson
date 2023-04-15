@@ -19,7 +19,6 @@ package io.github.iwyfewwnt.uwgson.deserializers;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import io.github.iwyfewwnt.uwgson.utils.UwJson;
 
 import java.lang.reflect.Type;
 
@@ -40,9 +39,32 @@ public final class UwCharacterJsonDeserializer implements JsonDeserializer<Chara
 	 */
 	@Override
 	public Character deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		UwJson.setIsAllowNullStringOption(false);
-//		UwJson.setIsAllowEmptyStringOption(true);  // Default
+		if (json == null || type == null
+				|| context == null || json.isJsonNull()) {
+			return null;
+		}
 
-		return UwJson.deserialize(json, Character.class);
+		try {
+			String str = json.getAsString();
+
+			if (str.equals("null")) {
+				return null;
+			}
+
+			if (str.length() == 1) {
+				return str.charAt(0);
+			}
+
+			throw new UnsupportedOperationException(
+					"Unable to deserialize the <"
+							+ type.getTypeName() + "> type"
+			);
+		} catch (UnsupportedOperationException
+				| IllegalStateException
+				| AssertionError e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 }

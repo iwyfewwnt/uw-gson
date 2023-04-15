@@ -19,7 +19,6 @@ package io.github.iwyfewwnt.uwgson.deserializers;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import io.github.iwyfewwnt.uwgson.utils.UwJson;
 
 import java.lang.reflect.Type;
 
@@ -40,10 +39,49 @@ public final class UwBooleanJsonDeserializer implements JsonDeserializer<Boolean
 	 */
 	@Override
 	public Boolean deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		UwJson.setIsAllowNullStringOption(false);
-//		UwJson.setIsAllowEmptyStringOption(true);  // Default
-		UwJson.setIsAllowIntAsBoolOption(true);
+		if (json == null || type == null
+				|| context == null || json.isJsonNull()) {
+			return null;
+		}
 
-		return UwJson.deserialize(json, Boolean.class);
+		try {
+			String str = json.getAsString();
+
+			if (str.equals("null")) {
+				return null;
+			}
+
+			if (str.equals("true")) {
+				return Boolean.TRUE;
+			}
+
+			if (str.equals("false")) {
+				return Boolean.FALSE;
+			}
+
+			try {
+				int intVal = Integer.parseInt(str);
+
+				if (intVal == 1) {
+					return Boolean.TRUE;
+				}
+
+				if (intVal == 0) {
+					return Boolean.FALSE;
+				}
+			} catch (NumberFormatException ignored) {
+			}
+
+			throw new UnsupportedOperationException(
+					"Unable to deserialize the <"
+							+ type.getTypeName() + "> type"
+			);
+		} catch (UnsupportedOperationException
+				| IllegalStateException
+				| AssertionError e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 }
