@@ -39,8 +39,7 @@ public final class UwIntegerJsonDeserializer implements JsonDeserializer<Integer
 	 */
 	@Override
 	public Integer deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		if (json == null || type == null
-				|| context == null || json.isJsonNull()) {
+		if (json == null || json.isJsonNull()) {
 			return null;
 		}
 

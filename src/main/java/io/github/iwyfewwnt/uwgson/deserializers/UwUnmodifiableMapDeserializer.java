@@ -29,8 +29,7 @@ public final class UwUnmodifiableMapDeserializer implements JsonDeserializer<Map
 	 */
 	@Override
 	public Map<?, ?> deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		if (json == null || type == null
-				|| context == null || json.isJsonNull()) {
+		if (json == null || json.isJsonNull()) {
 			return null;
 		}
 

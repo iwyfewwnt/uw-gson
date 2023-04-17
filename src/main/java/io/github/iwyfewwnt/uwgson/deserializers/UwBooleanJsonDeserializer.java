@@ -39,8 +39,7 @@ public final class UwBooleanJsonDeserializer implements JsonDeserializer<Boolean
 	 */
 	@Override
 	public Boolean deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		if (json == null || type == null
-				|| context == null || json.isJsonNull()) {
+		if (json == null || json.isJsonNull()) {
 			return null;
 		}
 

@@ -29,8 +29,7 @@ public final class UwUnmodifiableSetDeserializer implements JsonDeserializer<Set
 	 */
 	@Override
 	public Set<?> deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		if (json == null || type == null
-				|| context == null || json.isJsonNull()) {
+		if (json == null || json.isJsonNull()) {
 			return null;
 		}
 

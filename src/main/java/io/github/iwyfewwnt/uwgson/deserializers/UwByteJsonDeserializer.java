@@ -39,8 +39,7 @@ public final class UwByteJsonDeserializer implements JsonDeserializer<Byte> {
 	 */
 	@Override
 	public Byte deserialize(JsonElement json, Type type, JsonDeserializationContext context) {
-		if (json == null || type == null
-				|| context == null || json.isJsonNull()) {
+		if (json == null || json.isJsonNull()) {
 			return null;
 		}
 
