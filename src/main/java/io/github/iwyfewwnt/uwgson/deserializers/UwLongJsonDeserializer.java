@@ -60,10 +60,8 @@ public final class UwLongJsonDeserializer implements JsonDeserializer<Long> {
 					"Unable to deserialize the <"
 							+ type.getTypeName() + "> type"
 			);
-		} catch (UnsupportedOperationException
-				| IllegalStateException
-				| AssertionError e) {
-			e.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
 		}
 
 		return null;

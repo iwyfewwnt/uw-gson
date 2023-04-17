@@ -5,7 +5,6 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 
-import java.lang.reflect.MalformedParameterizedTypeException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Collections;
@@ -58,16 +57,8 @@ public final class UwUnmodifiableMapDeserializer implements JsonDeserializer<Map
 			}
 
 			return Collections.unmodifiableMap(map);
-		} catch (ClassCastException
-				| NullPointerException
-				| IndexOutOfBoundsException
-				| TypeNotPresentException
-				| MalformedParameterizedTypeException
-				| IllegalArgumentException
-				| UnsupportedOperationException
-				| IllegalStateException
-				| AssertionError e) {
-			e.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
 		}
 
 		return null;
