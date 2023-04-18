@@ -40,6 +40,10 @@ public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 			return null;
 		}
 
+		if (typeAdapter instanceof TypeAdapter) {
+			return (TypeAdapter<T>) typeAdapter;
+		}
+
 		JsonSerializer<T> serializer = null;
 		if (typeAdapter instanceof JsonSerializer) {
 			serializer = (JsonSerializer<T>) typeAdapter;
