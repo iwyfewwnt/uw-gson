@@ -70,6 +70,10 @@ public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 			deserializer = (JsonDeserializer<T>) typeAdapter;
 		}
 
+		if (serializer == null && deserializer == null) {
+			throw new IllegalStateException("Both the serializer & deserializer are <null>");
+		}
+
 		// #nullSafe argument is added since google/gson#2.10
 		return new TreeTypeAdapter<>(serializer, deserializer, gson, type, null, false);
 	}
