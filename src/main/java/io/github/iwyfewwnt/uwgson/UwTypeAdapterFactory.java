@@ -50,7 +50,7 @@ public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 	 */
 	@Override
 	public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-		Object typeAdapter = getTypeAdapter(type.getRawType());
+		Object typeAdapter = initTypeAdapter(type.getRawType());
 
 		if (typeAdapter == null) {
 			return null;
@@ -79,12 +79,12 @@ public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 	}
 
 	/**
-	 * Get a type adapter for the provided class.
+	 * Initialize a type adapter for the provided class.
 	 *
-	 * @param clazz		class type of the type adapter
-	 * @return			type adapter or {@code null}
+	 * @param clazz		type class to initialize a type adapter for
+	 * @return			associated type adapter or {@code null}
 	 */
-	private static Object getTypeAdapter(Class<?> clazz) {
+	private static Object initTypeAdapter(Class<?> clazz) {
 		if (clazz == String.class) {
 			return new UwStringJsonDeserializer();
 		}
