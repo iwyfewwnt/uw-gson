@@ -16,9 +16,7 @@
 
 package io.github.iwyfewwnt.uwgson;
 
-import com.google.gson.*;
-import com.google.gson.internal.bind.TreeTypeAdapter;
-import com.google.gson.reflect.TypeToken;
+import io.github.iwyfewwnt.gsonfactory.AbstractTypeAdapterFactory;
 import io.github.iwyfewwnt.uwgson.deserializers.*;
 
 import java.util.List;
@@ -36,8 +34,8 @@ import java.util.Set;
  * }</pre>
  * <hr>
  */
-@SuppressWarnings({"unused", "unchecked"})
-public final class UwTypeAdapterFactory implements TypeAdapterFactory {
+@SuppressWarnings("unused")
+public final class UwTypeAdapterFactory extends AbstractTypeAdapterFactory {
 
 	/**
 	 * Initialize a {@link UwTypeAdapterFactory} instance.
@@ -49,42 +47,7 @@ public final class UwTypeAdapterFactory implements TypeAdapterFactory {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-		Object typeAdapter = initTypeAdapter(type.getRawType());
-
-		if (typeAdapter == null) {
-			return null;
-		}
-
-		if (typeAdapter instanceof TypeAdapter) {
-			return (TypeAdapter<T>) typeAdapter;
-		}
-
-		JsonSerializer<T> serializer = null;
-		if (typeAdapter instanceof JsonSerializer) {
-			serializer = (JsonSerializer<T>) typeAdapter;
-		}
-
-		JsonDeserializer<T> deserializer = null;
-		if (typeAdapter instanceof JsonDeserializer) {
-			deserializer = (JsonDeserializer<T>) typeAdapter;
-		}
-
-		if (serializer == null && deserializer == null) {
-			throw new IllegalStateException("Both the serializer & deserializer are <null>");
-		}
-
-		// #nullSafe argument is added since google/gson#2.10
-		return new TreeTypeAdapter<>(serializer, deserializer, gson, type, null, false);
-	}
-
-	/**
-	 * Initialize a type adapter for the provided class.
-	 *
-	 * @param clazz		type class to initialize a type adapter for
-	 * @return			associated type adapter or {@code null}
-	 */
-	private static Object initTypeAdapter(Class<?> clazz) {
+	protected Object initTypeAdapter(Class<?> clazz) {
 		if (clazz == String.class) {
 			return new UwStringJsonDeserializer();
 		}
